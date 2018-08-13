@@ -1,0 +1,93 @@
+Do SSH to Linux Instance from Base Machine:
+
+# ssh -i "cloudcicd.pem" ubuntu@ec2-54-82-235-95.compute-1.amazonaws.com
+
+Download, Install & Configure below softwares :
+
+1. Python
+2. Pip
+3. Aws-cli 
+4. Terraform
+
+# apt-get update -y
+
+# apt install python3
+
+# python3 --version
+
+# apt install python-pip 
+or
+# curl https://bootstrap.pypa.io/get-pip.py > get-pip.py
+
+# python get-pip.py
+
+# pip --version
+
+# pip install --upgrade pip
+
+# pip2.7 --version
+
+# pip2.7 install awscli
+
+# aws --version
+
+Steps to install terraform on Ubuntu / Ubuntu cloud server:
+
+Install unzip :
+# sudo apt-get install unzip
+
+Download latest version of the terraform:
+
+# wget https://releases.hashicorp.com/terraform/0.11.1/terraform_0.11.1_linux_amd64.zip
+
+Extract the downloaded file archive:
+
+# unzip terraform_0.11.1_linux_amd64.zip
+
+Move the executable into a directory searched for executables:
+
+# sudo mv terraform /usr/local/bin/
+
+Check the version:
+
+# terraform --version
+
+# apt-get update -y
+
+# apt-get install ansible -y
+
+# ansible --version
+
+# pip2.7 install boto
+
+# grep -H -n --color "host_key_checking" /etc/ansible/ansible.cfg
+/etc/ansible/ansible.cfg:38:host_key_checking = False
+
+# mkdir /terra-ansible
+
+# git clone https://github.com/keshavkummari/terra-ansible-lab.git
+
+# cd terra-ansible-lab/
+
+# ssh-keygen
+
+# ssh-agent bash
+
+# ssh-add ~/.ssh/id_rsa
+Identity added: /root/.ssh/id_rsa (/root/.ssh/id_rsa)
+
+# ssh-add -l
+4096 SHA256:g13FwNa6wUzcq2tMbS6/BLw86M/EsTMWlaJISd2U25w /root/.ssh/id_rsa (RSA)
+
+# terraform plan
+
+var.localip
+  Enter a value: 0.0.0.0/0
+  
+root@ip-172-31-94-35:/terra-ansible/terra-ansible-lab# terraform apply
+var.localip
+  Enter a value: 0.0.0.0/0
+  
+  Yes
+
+Note : It will take 10-minutes to complete the IAAS.
