@@ -1,4 +1,4 @@
-aws_profile       = "linuxacademy"
+aws_profile       = "cloudcicd"
 aws_region        = "us-east-1"
 db_instance_class = "db.t2.micro"
 dbname		  = "cloudcicdmydb"
